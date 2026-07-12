@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KT Crochet</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+
+
+*{
+
+box-sizing:border-box;
+
+}
+
+
+
+body{
+
+margin:0;
+
+background:#faf7f5;
+
+color:#332d2d;
+
+font-family:Montserrat, Arial, sans-serif;
+
+}
+
+
+
+/* tiny decorative details */
+
+
+body::before{
+
+content:"♡  ✿  ♡  ✧  ♡";
+
+position:fixed;
+
+top:18px;
+
+left:25px;
+
+color:#d7a6b7;
+
+opacity:.45;
+
+font-size:18px;
+
+letter-spacing:12px;
+
+z-index:1;
+
+}
+
+
+
+/* HEADER */
+
+
+header{
+
+background:#ffffff;
+
+border-bottom:1px solid #eee5e2;
+
+position:relative;
+
+z-index:50;
+
+}
+
+
+
+nav{
+
+height:120px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:55px;
+
+}
+
+
+
+.logo{
+
+font-family:"Playfair Display", serif;
+
+font-size:42px;
+
+letter-spacing:10px;
+
+color:#292424;
+
+}
+
+
+
+nav a{
+
+text-decoration:none;
+
+color:#332d2d;
+
+font-size:13px;
+
+letter-spacing:3px;
+
+}
+
+
+
+/* DROPDOWN MENU */
+
+
+.dropdown{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+}
+
+
+
+.dropdown-menu{
+
+display:none;
+
+position:absolute;
+
+top:100%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:white;
+
+width:220px;
+
+padding:15px 0;
+
+border:1px solid #eee5e2;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+z-index:9999;
+
+}
+
+
+
+.dropdown-menu a{
+
+display:block;
+
+padding:13px 20px;
+
+font-size:11px;
+
+letter-spacing:3px;
+
+}
+
+
+
+.dropdown-menu a:hover{
+
+background:#faeef1;
+
+color:#d18fa3;
+
+}
+
+
+
+.dropdown:hover .dropdown-menu{
+
+display:block;
+
+}
+
+
+
+/* HERO LANDSCAPE BANNER */
+
+
+.hero{
+
+width:92%;
+
+height:520px;
+
+margin:35px auto;
+
+
+background-image:url("https://i.pinimg.com/736x/4f/a5/f5/4fa5f55cc4aa9c4d6a3c1b67403666e2.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+.hero-box{
+
+background:#f7d6df;
+
+padding:40px 75px;
+
+text-align:center;
+
+}
+
+
+
+.hero h1{
+
+font-family:"Playfair Display",serif;
+
+font-weight:400;
+
+font-size:48px;
+
+letter-spacing:12px;
+
+margin:0;
+
+}
+
+
+
+.hero p{
+
+font-size:11px;
+
+letter-spacing:5px;
+
+margin-top:22px;
+
+}
+
+
+
+/* FEATURED */
+
+
+.section-title{
+
+text-align:center;
+
+font-family:"Playfair Display",serif;
+
+font-weight:400;
+
+font-size:48px;
+
+letter-spacing:6px;
+
+margin-top:90px;
+
+}
+
+
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+padding:60px 8% 80px;
+
+}
+
+
+
+.product{
+
+text-align:center;
+
+}
+
+
+
+.product-image{
+
+height:430px;
+
+background:
+
+linear-gradient(
+135deg,
+#eadbd7,
+#e4dce8
+);
+
+}
+
+
+
+.product h3{
+
+font-size:13px;
+
+font-weight:500;
+
+letter-spacing:5px;
+
+margin-top:25px;
+
+}
+
+
+
+.product span{
+
+font-size:11px;
+
+letter-spacing:3px;
+
+color:#999;
+
+}
+
+
+
+/* SLOGAN SECTION */
+
+
+.intro{
+
+background:#faf7f5;
+
+padding:75px 15%;
+
+text-align:center;
+
+}
+
+
+
+.tiny-decoration{
+
+font-size:20px;
+
+color:#d7a6b7;
+
+letter-spacing:12px;
+
+margin-bottom:25px;
+
+}
+
+
+
+.intro p{
+
+font-size:15px;
+
+line-height:2;
+
+letter-spacing:2px;
+
+color:#4b3e3e;
+
+margin:0;
+
+}
+
+
+
+
+
+/* YOU MAY ALSO LIKE */
+
+
+.recommend{
+
+background:#faf7f5;
+
+padding:70px 8%;
+
+}
+
+
+
+.recommend h2{
+
+font-family:"Playfair Display",serif;
+
+font-weight:400;
+
+text-align:left;
+
+font-size:28px;
+
+letter-spacing:4px;
+
+margin-bottom:35px;
+
+margin-left:0;
+
+}
+
+
+
+.scroll-products{
+
+display:flex;
+
+gap:25px;
+
+overflow-x:auto;
+
+padding-bottom:15px;
+
+}
+
+
+
+.scroll-products div{
+
+min-width:320px;
+
+text-align:center;
+
+}
+
+
+
+.scroll-products img{
+
+width:320px;
+
+height:420px;
+
+object-fit:cover;
+
+background:#eee;
+
+}
+
+
+
+.scroll-products p{
+
+font-size:11px;
+
+letter-spacing:3px;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+background:#292525;
+
+color:white;
+
+padding:55px;
+
+text-align:center;
+
+font-size:11px;
+
+letter-spacing:5px;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:800px){
+
+
+nav{
+
+height:auto;
+
+padding:30px;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+
+.logo{
+
+font-size:30px;
+
+}
+
+
+.hero{
+
+height:400px;
+
+}
+
+
+.hero-box{
+
+padding:30px;
+
+}
+
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+
+.products{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+<header>
+
+
+<nav>
+
+<div class="logo">
+
+KT CROCHET
+
+</div>
+
+
+
+<div class="dropdown">
+
+
+<a href="#">
+PATTERNS ♡
+</a>
+
+
+
+<div class="dropdown-menu">
+
+
+<a href="patterns/beginner.html">
+BEGINNER
+</a>
+
+
+<a href="patterns/intermediate.html">
+INTERMEDIATE
+</a>
+
+
+<a href="patterns/advanced.html">
+ADVANCED
+</a>
+
+
+<a href="patterns/plushies.html">
+PLUSHIES
+</a>
+
+
+<a href="patterns/bags.html">
+BAGS
+</a>
+
+
+<a href="patterns/clothes.html">
+CLOTHES
+</a>
+
+
+<a href="patterns/extra.html">
+EXTRA
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="dropdown">
+
+
+<a href="#">
+VIDEO TUTORIALS ♡
+</a>
+
+
+
+<div class="dropdown-menu">
+
+
+<a href="videos/beginner-videos.html">
+BEGINNER TUTORIALS
+</a>
+
+
+<a href="videos/stitches.html">
+STITCH TUTORIALS
+</a>
+
+
+<a href="videos/full-patterns.html">
+FULL PATTERN TUTORIALS
+</a>
+
+
+<a href="videos/tips.html">
+TIPS & TRICKS
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<a href="contact.html">
+CONTACT
+</a>
+
+
+
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+
+<section class="hero">
+
+
+<div class="hero-box">
+
+
+<h1>
+KT CROCHET
+</h1>
+
+
+<p>
+FREE CROCHET PATTERNS & TUTORIALS
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<h2 class="section-title">
+
+FEATURED
+
+</h2>
+
+
+
+
+
+
+<section class="products">
+
+
+
+
+
+<div class="product">
+
+
+<div class="product-image"></div>
+
+
+<h3>
+DAISY BAG
+</h3>
+
+
+<span>
+BEGINNER
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="product">
+
+
+<div class="product-image"></div>
+
+
+<h3>
+FLOWER TOP
+</h3>
+
+
+<span>
+INTERMEDIATE
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="product">
+
+
+<div class="product-image"></div>
+
+
+<h3>
+CROCHET PLUSHIE
+</h3>
+
+
+<span>
+BEGINNER
+</span>
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<section class="intro">
+
+
+<div class="tiny-decoration">
+
+♡ ✿ ♡ ✧ ♡
+
+</div>
+
+
+
+<p>
+
+♡ Free patterns and tutorials for all the beginner, intermediate, and advanced crocheters everywhere ♡
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+<section class="recommend">
+
+
+<h2>
+
+YOU MAY ALSO LIKE...
+
+</h2>
+
+
+
+<div class="scroll-products">
+
+
+
+<div>
+
+<img src="images/recommend1.jpg" alt="Pattern">
+
+<p>
+FLOWER BAG
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<img src="images/recommend2.jpg" alt="Pattern">
+
+<p>
+SUMMER TOP
+</p>
+
+</div>
+
+
+
+
+
+<div>
+
+<img src="images/recommend3.jpg" alt="Pattern">
+
+<p>
+CROCHET PLUSHIE
+</p>
+
+</div>
+
+
+
+
+
+<div>
+
+<img src="images/recommend4.jpg" alt="Pattern">
+
+<p>
+ACCESSORIES
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+KT CROCHET
+
+
+<br><br>
+
+
+♡ INSTAGRAM &nbsp;&nbsp; PINTEREST &nbsp;&nbsp; YOUTUBE ♡
+
+
+
+</footer>
+
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<link rel="stylesheet" href="../style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BAGS Patterns | KT Crochet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#faf7f5;
+font-family:Montserrat,Arial,sans-serif;
+color:#332d2d;
+}
+
+body::before{
+content:"♡ ✿ ♡ ✧ ♡";
+position:fixed;
+top:18px;
+left:25px;
+letter-spacing:12px;
+color:#d7a6b7;
+opacity:.45;
+font-size:18px;
+z-index:1;
+}
+
+header{
+background:#fff;
+border-bottom:1px solid #eee5e2;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+nav{
+height:120px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:55px;
+}
+
+.logo{
+font-family:"Playfair Display",serif;
+font-size:42px;
+letter-spacing:10px;
+}
+
+.logo a{
+text-decoration:none;
+color:#292424;
+}
+
+nav a{
+text-decoration:none;
+color:#332d2d;
+font-size:13px;
+letter-spacing:3px;
+transition:.25s;
+}
+
+nav a:hover{
+color:#d18fa3;
+}
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:100%;
+left:50%;
+transform:translateX(-50%);
+width:220px;
+background:#fff;
+border:1px solid #eee5e2;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+padding:15px 0;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+.dropdown-menu a{
+display:block;
+padding:13px 20px;
+font-size:11px;
+}
+
+.dropdown-menu a:hover{
+background:#faeef1;
+}
+
+
+.page-title{
+padding:80px 0 40px;
+text-align:center;
+}
+
+.page-title h1{
+font-family:"Playfair Display",serif;
+font-size:54px;
+font-weight:400;
+letter-spacing:8px;
+margin-bottom:18px;
+}
+
+.page-title p{
+font-size:12px;
+letter-spacing:5px;
+color:#777;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav>
+
+<div class="logo">
+<a href="../index.html">KT CROCHET</a>
+</div>
+
+
+<div class="dropdown">
+
+<a href="#">PATTERNS ♡</a>
+
+
+<div class="dropdown-menu">
+
+<a href="beginner.html">BEGINNER</a>
+
+<a href="intermediate.html">INTERMEDIATE</a>
+
+<a href="advanced.html">ADVANCED</a>
+
+<a href="plushies.html">PLUSHIES</a>
+
+<a href="bags.html">BAGS</a>
+
+<a href="clothes.html">CLOTHES</a>
+
+<a href="extra.html">EXTRA</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<a href="#">VIDEO TUTORIALS ♡</a>
+
+<div class="dropdown-menu">
+
+<a href="../videos/stitches.html">STITCH TUTORIALS</a>
+
+<a href="../videos/full-patterns.html">FULL PATTERN TUTORIALS</a>
+
+<a href="../videos/tips.html">TIPS & TRICKS</a>
+
+</div>
+
+</div>
+
+
+<a href="../contact.html">CONTACT</a>
+
+
+</nav>
+
+</header>
+
+
+
+<section class="page-title">
+
+<h1>BAGS PATTERNS</h1>
+
+<p>CROCHET BAGS FOR EVERY STYLE & SKILL LEVEL</p>
+
+</section>
+<section class="pattern-grid">
+
+
+<div class="card"
+onclick="openPopup(
+'FLOWER BAG',
+'Crochet bag pattern with a floral design and detailed instructions.',
+'../images/bag1.jpg'
+)">
+
+<img src="../images/bag1.jpg" alt="Bag">
+
+<h3>FLOWER BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'SUMMER TOTE',
+'Lightweight crochet tote bag pattern perfect for everyday use.',
+'../images/bag2.jpg'
+)">
+
+<img src="../images/bag2.jpg" alt="Bag">
+
+<h3>SUMMER TOTE</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'GRANNY SQUARE BAG',
+'Classic granny square crochet bag pattern.',
+'../images/bag3.jpg'
+)">
+
+<img src="../images/bag3.jpg" alt="Bag">
+
+<h3>GRANNY SQUARE BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'MINI PURSE',
+'Small crochet purse pattern with beginner friendly construction.',
+'../images/bag4.jpg'
+)">
+
+<img src="../images/bag4.jpg" alt="Bag">
+
+<h3>MINI PURSE</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'BUCKET BAG',
+'Crochet bucket bag pattern with structured shaping.',
+'../images/bag5.jpg'
+)">
+
+<img src="../images/bag5.jpg" alt="Bag">
+
+<h3>BUCKET BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'LACE MARKET BAG',
+'Open stitch crochet market bag pattern.',
+'../images/bag6.jpg'
+)">
+
+<img src="../images/bag6.jpg" alt="Bag">
+
+<h3>LACE MARKET BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'CROSSBODY BAG',
+'Crochet crossbody bag pattern with strap instructions.',
+'../images/bag7.jpg'
+)">
+
+<img src="../images/bag7.jpg" alt="Bag">
+
+<h3>CROSSBODY BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'PATCHWORK BAG',
+'Colorful patchwork crochet bag pattern.',
+'../images/bag8.jpg'
+)">
+
+<img src="../images/bag8.jpg" alt="Bag">
+
+<h3>PATCHWORK BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'FLOWER TOTE',
+'Crochet tote bag with flower details.',
+'../images/bag9.jpg'
+)">
+
+<img src="../images/bag9.jpg" alt="Bag">
+
+<h3>FLOWER TOTE</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'BEACH BAG',
+'Large crochet beach bag pattern.',
+'../images/bag10.jpg'
+)">
+
+<img src="../images/bag10.jpg" alt="Bag">
+
+<h3>BEACH BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'CHECKERBOARD BAG',
+'Checkerboard crochet bag pattern.',
+'../images/bag11.jpg'
+)">
+
+<img src="../images/bag11.jpg" alt="Bag">
+
+<h3>CHECKERBOARD BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+
+
+<div class="card"
+onclick="openPopup(
+'HEART BAG',
+'Cute heart detail crochet bag pattern.',
+'../images/bag12.jpg'
+)">
+
+<img src="../images/bag12.jpg" alt="Bag">
+
+<h3>HEART BAG</h3>
+
+<span>BAGS</span>
+
+</div>
+
+
+</section>
+<footer>
+
+KT CROCHET
+
+<br><br>
+
+♡ INSTAGRAM &nbsp;&nbsp; PINTEREST &nbsp;&nbsp; YOUTUBE ♡
+
+</footer>
+
+
+
+
+
+<!-- POPUP -->
+
+<div id="popup" class="popup">
+
+
+<div class="popup-box">
+
+
+<span onclick="closePopup()" class="close">
+×
+</span>
+
+
+
+<img id="popup-img">
+
+
+
+<h2 id="popup-title"></h2>
+
+
+
+<p id="popup-text"></p>
+
+
+
+<a id="popup-download" download>
+Download
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script src="../script.js"></script>
+
+
+
+</body>
+
+</html>

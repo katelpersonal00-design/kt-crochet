@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<link rel="stylesheet" href="../style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Intermediate Patterns | KT Crochet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#faf7f5;
+font-family:Montserrat,Arial,sans-serif;
+color:#332d2d;
+}
+
+body::before{
+content:"♡ ✿ ♡ ✧ ♡";
+position:fixed;
+top:18px;
+left:25px;
+letter-spacing:12px;
+color:#d7a6b7;
+opacity:.45;
+font-size:18px;
+z-index:1;
+}
+
+header{
+background:#fff;
+border-bottom:1px solid #eee5e2;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+nav{
+height:120px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:55px;
+}
+
+.logo{
+font-family:"Playfair Display",serif;
+font-size:42px;
+letter-spacing:10px;
+}
+
+.logo a{
+text-decoration:none;
+color:#292424;
+}
+
+nav a{
+text-decoration:none;
+color:#332d2d;
+font-size:13px;
+letter-spacing:3px;
+transition:.25s;
+}
+
+nav a:hover{
+color:#d18fa3;
+}
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:100%;
+left:50%;
+transform:translateX(-50%);
+width:220px;
+background:#fff;
+border:1px solid #eee5e2;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+padding:15px 0;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+.dropdown-menu a{
+display:block;
+padding:13px 20px;
+font-size:11px;
+}
+
+.dropdown-menu a:hover{
+background:#faeef1;
+}
+
+
+.page-title{
+padding:80px 0 40px;
+text-align:center;
+}
+
+.page-title h1{
+font-family:"Playfair Display",serif;
+font-size:54px;
+font-weight:400;
+letter-spacing:8px;
+margin-bottom:18px;
+}
+
+.page-title p{
+font-size:12px;
+letter-spacing:5px;
+color:#777;
+}
+
+
+.pattern-grid{
+width:90%;
+margin:40px auto 100px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+
+.card{
+text-decoration:none;
+color:#332d2d;
+transition:.35s;
+cursor:pointer;
+}
+
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+
+.card img{
+width:100%;
+height:430px;
+object-fit:cover;
+background:#eadbd7;
+transition:.35s;
+}
+
+
+.card:hover img{
+transform:scale(1.02);
+}
+
+
+.card h3{
+margin-top:18px;
+font-size:13px;
+letter-spacing:4px;
+font-weight:500;
+text-align:center;
+}
+
+
+.card span{
+display:block;
+text-align:center;
+margin-top:10px;
+font-size:11px;
+letter-spacing:3px;
+color:#888;
+}
+
+
+footer{
+background:#292525;
+color:white;
+padding:55px;
+text-align:center;
+font-size:11px;
+letter-spacing:5px;
+}
+
+
+@media(max-width:900px){
+
+nav{
+flex-wrap:wrap;
+height:auto;
+padding:30px;
+gap:25px;
+}
+
+.logo{
+font-size:30px;
+}
+
+.pattern-grid{
+grid-template-columns:1fr;
+}
+
+.page-title h1{
+font-size:36px;
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav>
+
+<div class="logo">
+<a href="../index.html">KT CROCHET</a>
+</div>
+
+
+<div class="dropdown">
+
+<a href="#">PATTERNS ♡</a>
+
+
+<div class="dropdown-menu">
+
+<a href="beginner.html">BEGINNER</a>
+
+<a href="intermediate.html">INTERMEDIATE</a>
+
+<a href="advanced.html">ADVANCED</a>
+
+<a href="plushies.html">PLUSHIES</a>
+
+<a href="bags.html">BAGS</a>
+
+<a href="clothes.html">CLOTHES</a>
+
+<a href="extra.html">EXTRA</a>
+
+
+</div>
+
+</div>
+
+
+
+<div class="dropdown">
+
+
+<a href="#">VIDEO TUTORIALS ♡</a>
+
+
+<div class="dropdown-menu">
+
+
+<a href="../videos/stitches.html">STITCH TUTORIALS</a>
+
+<a href="../videos/full-patterns.html">FULL PATTERN TUTORIALS</a>
+
+<a href="../videos/tips.html">TIPS & TRICKS</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<a href="../contact.html">CONTACT</a>
+
+
+</nav>
+
+</header>
+
+
+
+<section class="page-title">
+INTERMEDIATE PATTERNS</h1>
+
+<p>CHALLENGING PROJECTS TO START YOUR CROCHET JOURNEY</p>
+
+</section>
+<section class="pattern-grid">
+
+
+<div class="card"
+onclick="openPopup(
+'FLOWER TOP',
+'Intermediate crochet pattern. Includes detailed instructions and steps.',
+'../images/intermediate1.jpg'
+)">
+
+<img src="../images/intermediate1.jpg" alt="Pattern">
+
+<h3>FLOWER TOP</h3>
+
+<span>intermediate</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'SUMMER TOTE',
+'intermediate crochet tote pattern with detailed construction.',
+'../images/intermediate2.jpg'
+)">
+
+<img src="../images/intermediate2.jpg" alt="Pattern">
+
+<h3>SUMMER TOTE</h3>
+
+<span>intermediate</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'SUNFLOWER PILLOW',
+'Intermediate sunflower pillow crochet pattern.',
+'../images/intermediate3.jpg'
+)">
+
+<img src="../images/intermediate3.jpg" alt="Pattern">
+
+<h3>SUNFLOWER PILLOW</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'PATCHWORK CARDIGAN',
+'Intermediate cardigan pattern using detailed crochet techniques.',
+'../images/intermediate4.jpg'
+)">
+
+<img src="../images/intermediate4.jpg" alt="Pattern">
+
+<h3>PATCHWORK CARDIGAN</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'BUCKET HAT',
+'Intermediate crochet bucket hat pattern.',
+'../images/intermediate5.jpg'
+)">
+
+<img src="../images/intermediate5.jpg" alt="Pattern">
+
+<h3>BUCKET HAT</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'LACE MARKET BAG',
+'Intermediate lace crochet bag pattern.',
+'../images/Intermediate6.jpg'
+)">
+
+<img src="../images/Intermediate6.jpg" alt="Pattern">
+
+<h3>LACE MARKET BAG</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'GRANNY VEST',
+'Intermediate granny square vest pattern.',
+'../images/intermediate7.jpg'
+)">
+
+<img src="../images/intermediate7.jpg" alt="Pattern">
+
+<h3>GRANNY VEST</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'FLORAL WALL HANGING',
+'Intermediate floral crochet wall hanging.',
+'../images/intermediate8.jpg'
+)">
+
+<img src="../images/intermediate8.jpg" alt="Pattern">
+
+<h3>FLORAL WALL HANGING</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'RIBBED BEANIE',
+'Intermediate ribbed crochet beanie pattern.',
+'../images/intermediate9.jpg'
+)">
+
+<img src="../images/intermediate9.jpg" alt="Pattern">
+
+<h3>RIBBED BEANIE</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'HEART PILLOW',
+'Intermediate heart pillow crochet pattern.',
+'../images/intermediate10.jpg'
+)">
+
+<img src="../images/intermediate10.jpg" alt="Pattern">
+
+<h3>HEART PILLOW</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'CHECKERBOARD TOTE',
+'Advanced checkerboard tote crochet pattern.',
+'../images/intermediate11.jpg'
+)">
+
+<img src="../images/interediate11.jpg" alt="Pattern">
+
+<h3>CHECKERBOARD TOTE</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+
+<div class="card"
+onclick="openPopup(
+'FLOWER SHRUG',
+'Advanced floral shrug crochet pattern.',
+'../images/intermediate12.jpg'
+)">
+
+<img src="../images/intermediate12.jpg" alt="Pattern">
+
+<h3>FLOWER SHRUG</h3>
+
+<span>INTERMEDIATE</span>
+
+</div>
+
+
+</section>
+<footer>
+
+KT CROCHET
+
+<br><br>
+
+♡ INSTAGRAM &nbsp;&nbsp; PINTEREST &nbsp;&nbsp; YOUTUBE ♡
+
+</footer>
+
+
+
+
+
+<!-- POPUP -->
+
+<div id="popup" class="popup">
+
+
+<div class="popup-box">
+
+
+<span onclick="closePopup()" class="close">
+×
+</span>
+
+
+
+<img id="popup-img">
+
+
+
+<h2 id="popup-title"></h2>
+
+
+
+<p id="popup-text"></p>
+
+
+
+<a id="popup-download" download>
+Download
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<<script src="../script.js"></script>
+
+
+
+</body>
+
+</html>
